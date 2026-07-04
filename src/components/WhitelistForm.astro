@@ -42,7 +42,7 @@ const t = useTranslations(lang);
   const successMsg = isCatalan ? 'Gràcies per unir-te! Et mantindrem informat.' : '¡Gracias por unirte! Te mantendremos informado.';
   const errorMsg = isCatalan ? 'Hi ha hagut un error en registrar-te. Torna-ho a provar.' : 'Hubo un error al registrarte. Inténtalo de nuevo.';
   const invalidEmailMsg = isCatalan ? 'Si us plau, introdueix un correu electrònic vàlid.' : 'Por favor, introduce un correo electrónico válido.';
-  const requirePrivacyMsg = isCatalan ? 'Has d\\'acceptar la política de privacitat.' : 'Debes aceptar la política de privacidad.';
+  const requirePrivacyMsg = isCatalan ? "Has d'acceptar la política de privacitat." : "Debes aceptar la política de privacidad.";
 
   const validateEmail = (email: string) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
