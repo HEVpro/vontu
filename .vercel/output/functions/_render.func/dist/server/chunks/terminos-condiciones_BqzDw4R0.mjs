@@ -1,0 +1,23 @@
+import { t as __exportAll } from "./rolldown-runtime_D7D4PA-g.mjs";
+import { a as renderComponent, f as renderTemplate, g as maybeRenderHead, w as createComponent } from "./server_CxqNCoH5.mjs";
+import "./compiler_CpwG-MQt.mjs";
+import { i as useTranslations, t as $$BaseLayout } from "./BaseLayout_CnROnPHP.mjs";
+//#region src/pages/ca/terminos-condiciones.astro
+var terminos_condiciones_exports = /* @__PURE__ */ __exportAll({
+	default: () => $$TerminosCondiciones,
+	file: () => $$file,
+	url: () => $$url
+});
+var $$TerminosCondiciones = createComponent(($$result, $$props, $$slots) => {
+	return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, {
+		"title": `Vontu | ${useTranslations("ca")("footer.terms")}`,
+		"description": "Termes i Condicions de Vontu"
+	}, { "default": ($$result) => renderTemplate`${maybeRenderHead($$result)}<div class="max-w-4xl mx-auto px-4 py-32"><div class="prose max-w-4xl mx-auto px-4 py-12 dark:prose-invert prose-marron"><h1>Termes i Condicions d'Ús</h1><p><strong>Última actualització:</strong> Juliol 2026</p><p>Benvingut a la landing page de prellançament de Vontu. L'accés i ús d'aquest lloc web li atribueix la condició d'usuari i implica l'acceptació total d'aquests termes.</p><h3>1. Objecte del Lloc Web</h3><p>Aquest lloc web és una pàgina de captació i validació comercial ("whitelist") per al futur projecte Vontu, un ecosistema de banc del temps veïnal. En l'estat actual de la plataforma, no existeixen registres de comptes actius, no es realitzen transaccions econòmiques, ni es processen pagaments de cap tipus.</p><h3>2. Exempció de Responsabilitat</h3><p>Vontu actua exclusivament com un aparador informatiu en aquesta fase de prellançament.</p><ul><li>El titular no es fa responsable de les expectatives de llançament ni dels malentesos derivats del concepte teòric del programari explicat en el lloc web.</li><li>El titular queda totalment eximit de qualsevol tipus de responsabilitat civil, penal o per danys derivats d'un ús indegut de la landing page per part de tercers.</li></ul><h3>3. Propietat Intel·lectual</h3><p>Tots els continguts explicatius, el disseny de la interfície, el nom "Vontu" i els codis de la plataforma són propietat exclusiva de Pol Mas Torné o dels seus respectius llicenciants. Queda prohibida la reproducció total o parcial sense autorització prèvia.</p><h3>4. Modificacions</h3><p>El titular es reserva el dret a modificar les presents condicions, així com el contingut del lloc web, en qualsevol moment i sense previ avís per adaptar-los a novetats legislatives o a l'evolució tècnica del projecte.</p></div></div>` })}`;
+}, "/Users/hectoresquerdovalverde/Desktop/Projects/poligens-trigens/src/pages/ca/terminos-condiciones.astro", void 0);
+var $$file = "/Users/hectoresquerdovalverde/Desktop/Projects/poligens-trigens/src/pages/ca/terminos-condiciones.astro";
+var $$url = "/ca/terminos-condiciones";
+//#endregion
+//#region \0virtual:astro:page:src/pages/ca/terminos-condiciones@_@astro
+var page = () => terminos_condiciones_exports;
+//#endregion
+export { page };
