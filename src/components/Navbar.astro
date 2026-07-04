@@ -1,0 +1,31 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import ThemeToggle from './ThemeToggle.astro';
+import LanguagePicker from './LanguagePicker.astro';
+import Button from './Button.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<header class="fixed top-0 w-full bg-crema/90 dark:bg-petroleo/90 backdrop-blur-md z-50 border-b border-marron/10 dark:border-crema/10 transition-colors">
+  <div class="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
+    <a href={lang === 'es' ? '/' : `/${lang}/`} class="text-3xl font-black tracking-tight text-terracota dark:text-turquesa transition-colors">
+      Vontu
+    </a>
+    
+    <nav class="hidden md:flex items-center gap-8 font-semibold text-marron dark:text-crema">
+      <a href="#features" class="hover:text-terracota dark:hover:text-turquesa transition-colors">{t('nav.features')}</a>
+      <a href="#how-it-works" class="hover:text-terracota dark:hover:text-turquesa transition-colors">{t('nav.howItWorks')}</a>
+      <a href="#faq" class="hover:text-terracota dark:hover:text-turquesa transition-colors">{t('nav.faq')}</a>
+    </nav>
+    
+    <div class="flex items-center gap-3">
+      <ThemeToggle />
+      <LanguagePicker />
+      <div class="hidden sm:block ml-2">
+        <Button href="#whitelist" variant="primary" class="!px-5 text-sm">{t('nav.whitelist')}</Button>
+      </div>
+    </div>
+  </div>
+</header>

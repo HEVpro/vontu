@@ -1,0 +1,44 @@
+---
+export interface Props {
+  question: string;
+  answer: string;
+  id: string;
+}
+
+const { question, answer, id } = Astro.props;
+---
+
+<div class="border-b border-marron/10 dark:border-crema/10 last:border-0 py-4">
+  <button 
+    class="w-full flex justify-between items-center text-left font-semibold text-lg py-2 focus:outline-none text-marron dark:text-crema faq-button" 
+    aria-expanded="false" 
+    aria-controls={`faq-answer-${id}`}
+  >
+    <span>{question}</span>
+    <svg class="w-5 h-5 transform transition-transform faq-icon text-terracota dark:text-turquesa" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+  <div id={`faq-answer-${id}`} class="hidden mt-2 text-marron/70 dark:text-crema/70 faq-content">
+    <p class="pb-2">{answer}</p>
+  </div>
+</div>
+
+<script>
+  const buttons = document.querySelectorAll('.faq-button');
+  
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const isExpanded = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', (!isExpanded).toString());
+      
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('.faq-icon');
+      
+      if (content && icon) {
+        content.classList.toggle('hidden');
+        icon.classList.toggle('rotate-180');
+      }
+    });
+  });
+</script>

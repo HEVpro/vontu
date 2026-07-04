@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-marron: #562C2C;
+  --color-terracota: #F2542D;
+  --color-crema: #F5DFBB;
+  --color-turquesa: #0E9594;
+  --color-petroleo: #127475;
+}
+
+@layer base {
+  :root {
+    color-scheme: light dark;
+  }
+  
+  html {
+    @apply bg-crema text-marron antialiased;
+  }
+  
+  html.dark {
+    @apply bg-petroleo text-crema;
+  }
+}

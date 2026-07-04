@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { useTranslations } from '../i18n/utils';
+const t = useTranslations('es');
+---
+<BaseLayout title={`Vontu | ${t('footer.terms')}`} description="Términos y Condiciones de Vontu">
+  <div class="max-w-4xl mx-auto px-4 py-32">
+    <div class="prose max-w-4xl mx-auto px-4 py-12 dark:prose-invert prose-marron">
+      <h1>Términos y Condiciones de Uso</h1>
+
+      <p><strong>Última actualización:</strong> Julio 2026</p>
+
+      <p>Bienvenido a la landing page de prelanzamiento de Vontu. El acceso y uso de este sitio web le atribuye la condición de usuario e implica la aceptación total de estos términos.</p>
+
+      <h3>1. Objeto del Sitio Web</h3>
+      <p>Este sitio web es una página de captación y validación comercial ("whitelist") para el futuro proyecto Vontu, un ecosistema de banco del tiempo vecinal. En el estado actual de la plataforma, no existen registros de cuentas activos, no se realizan transacciones económicas, ni se procesan pagos de ningún tipo.</p>
+
+      <h3>2. Exención de Responsabilidad</h3>
+      <p>Vontu actúa exclusivamente como un escaparate informativo en esta fase de prelanzamiento.</p>
+      <ul>
+        <li>El titular no se hace responsable de las expectativas de lanzamiento ni de los malentendidos derivados del concepto teórico del software explicado en el sitio web.</li>
+        <li>El titular queda totalmente eximido de cualquier tipo de responsabilidad civil, penal o por daños derivados de un uso indebido de la landing page por parte de terceros.</li>
+      </ul>
+
+      <h3>3. Propiedad Intelectual</h3>
+      <p>Todos los contenidos explicativos, el diseño de la interfaz, el nombre "Vontu" y los códigos de la plataforma son propiedad exclusiva de Pol Mas Torné o de sus respectivos licenciantes. Queda prohibida la reproducción total o parcial sin autorización previa.</p>
+
+      <h3>4. Modificaciones</h3>
+      <p>El titular se reserva el derecho a modificar las presentes condiciones, así como el contenido del sitio web, en cualquier momento y sin previo aviso para adaptarlos a novedades legislativas o a la evolución técnica del proyecto.</p>
+    </div>
+  </div>
+</BaseLayout>

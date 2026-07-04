@@ -1,0 +1,21 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const basePath = lang === 'es' ? '' : `/${lang}`;
+---
+
+<footer class="bg-white dark:bg-petroleo border-t border-marron/10 dark:border-crema/10 py-12 mt-20 transition-colors">
+  <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6 text-marron/70 dark:text-crema/70 font-medium">
+    <div>
+      <span class="text-2xl font-black text-marron dark:text-crema mr-2">Vontu</span>
+      {t('footer.rights')}
+    </div>
+    
+        <div class="flex gap-4 mt-4 md:mt-0">
+        <a href={lang === 'es' ? '/terminos-condiciones' : '/ca/terminos-condiciones'} class="hover:text-terracota dark:hover:text-turquesa transition-colors">{t('footer.terms')}</a>
+        <a href={lang === 'es' ? '/politica-privacidad' : '/ca/politica-privacidad'} class="hover:text-terracota dark:hover:text-turquesa transition-colors">{t('footer.privacy')}</a>
+      </div>
+  </div>
+</footer>
