@@ -30,13 +30,12 @@ export const POST: APIRoute = async ({ request }) => {
         parent: { database_id: NOTION_DATABASE_ID },
         properties: {
           Email: {
-            title: [
-              {
-                text: {
-                  content: email
-                }
-              }
-            ]
+            email: email
+          },
+          Created: {
+            date: {
+              start: new Date().toISOString()
+            }
           }
         }
       })
