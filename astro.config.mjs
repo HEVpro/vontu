@@ -5,10 +5,8 @@ import vercel from '@astrojs/vercel';
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'server',
-  adapter: vercel({
-    includeFiles: ['./node_modules/piccolore/**/*']
-  }),
+  output: 'static',
+  adapter: vercel(),
   vite: {
     plugins: [tailwindcss()]
   },
